@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Technical Portfolio of [Your Name]" />
+  <title>[Your Name] | Technical Portfolio</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Custom CSS -->
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      scroll-behavior: smooth;
+    }
+    header {
+      background: #0d6efd;
+      color: white;
+      padding: 60px 0;
+    }
+    .section-title {
+      margin-bottom: 40px;
+      font-weight: bold;
+      color: #0d6efd;
+    }
+    .project-card {
+      transition: transform 0.3s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+    footer {
+      background: #f8f9fa;
+      padding: 20px 0;
+      text-align: center;
+    }
+    .btn-primary-outline {
+      background-color: transparent;
+      border: 2px solid white;
+      color: white;
+    }
+    .btn-primary-outline:hover {
+      background-color: white;
+      color: #0d6efd;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">[Your Name]</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="text-center">
+    <div class="container">
+      <h1 class="display-4 fw-bold">Hi, I'm [Your Name]</h1>
+      <p class="lead">A passionate [Your Role, e.g. Full-Stack Developer] specializing in [technologies].</p>
+      <a href="#contact" class="btn btn-primary-outline mt-3">Let's Connect</a>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="py-5">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <p>Hello! I’m [Your Name], a [Role/Title] with experience in [your background]. I enjoy creating scalable software, solving technical challenges, and collaborating with others to build impactful applications.</p>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="section-title">Skills</h2>
+      <div class="row">
+        <div class="col-md-3 col-6 mb-3"><i class="fab fa-html5"></i> HTML5</div>
+        <div class="col-md-3 col-6 mb-3"><i class="fab fa-css3-alt"></i> CSS3</div>
+        <div class="col-md-3 col-6 mb-3"><i class="fab fa-js-square"></i> JavaScript</div>
+        <div class="col-md-3 col-6 mb-3"><i class="fab fa-react"></i> React</div>
+        <div class="col-md-3 col-6 mb-3"><i class="fab fa-node-js"></i> Node.js</div>
+        <div class="col-md-3 col-6 mb-3"><i class="fab fa-python"></i> Python</div>
+        <div class="col-md-3 col-6 mb-3"><i class="fas fa-database"></i> SQL / MongoDB</div>
+        <div class="col-md-3 col-6 mb-3"><i class="fab fa-github"></i> GitHub</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-5">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+      <div class="row">
+        <!-- Project Card -->
+        <div class="col-md-4 mb-4">
+          <div class="card project-card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Project One</h5>
+              <p class="card-text">A web app that does XYZ using ABC tech stack.</p>
+              <a href="https://github.com/yourusername/project-one" class="btn btn-outline-primary btn-sm" target="_blank">GitHub</a>
+              <a href="https://yourusername.github.io/project-one/" class="btn btn-outline-secondary btn-sm" target="_blank">Live Demo</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Repeat cards for other projects -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="section-title">Education</h2>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          <strong>[Degree Title]</strong> - [University Name] (Year)<br>
+          Relevant Courses: [Course 1], [Course 2], [Course 3]
+        </li>
+        <!-- Add more education entries -->
+      </ul>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-5">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <p>If you'd like to collaborate or just say hi, feel free to reach out!</p>
+      <ul class="list-unstyled">
+        <li><i class="fas fa-envelope"></i> <a href="mailto:you@example.com">you@example.com</a></li>
+        <li><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a></li>
+        <li><i class="fab fa-github"></i> <a href="https://github.com/yourusername" target="_blank">GitHub</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <small>&copy; 2025 [Your Name]. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
