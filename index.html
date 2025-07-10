@@ -15,130 +15,7 @@
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <!-- Custom Styles -->
   <style>
-    :root {
-      --primary-color: #5a8dee;
-      --light-bg: #f5f8ff;
-      --soft-text: #5f6368;
-      --transition: all 0.3s ease-in-out;
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      line-height: 1.6;
-      color: #333;
-      background-color: #ffffff;
-      scroll-behavior: smooth;
-    }
-
-    .navbar {
-      background-color: #ffffff;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
-    }
-
-    header {
-      background: linear-gradient(145deg, #dce6ff, #e7ecff);
-      color: #1f2e55;
-      padding: 100px 0;
-      text-align: center;
-    }
-
-    header h1 {
-      font-size: 3rem;
-      font-weight: 700;
-      margin-bottom: 20px;
-      animation: fadeInDown 1s ease-in-out;
-    }
-
-    header p {
-      font-size: 1.25rem;
-      color: #5f6368;
-    }
-
-    .btn-outline-light {
-      border: 2px solid white;
-      color: white;
-      transition: var(--transition);
-    }
-
-    .btn-outline-light:hover {
-      background-color: white;
-      color: var(--primary-color);
-    }
-
-    .section-title {
-      font-size: 2rem;
-      font-weight: 600;
-      color: var(--primary-color);
-      margin-bottom: 40px;
-      text-align: center;
-    }
-
-    section {
-      padding: 60px 0;
-    }
-
-    #skills .col {
-      text-align: center;
-      font-weight: 500;
-      color: var(--soft-text);
-      padding: 15px;
-      transition: var(--transition);
-    }
-
-    #skills .col:hover {
-      background-color: var(--light-bg);
-      border-radius: 8px;
-    }
-
-    .card.project-card {
-      border: none;
-      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.05);
-      transition: var(--transition);
-    }
-
-    .project-card {
-        background-color: #fff;
-        transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
-        }
-
-    .project-card:hover {
-        transform: translateY(-5px) scale(1.02);
-        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.08);
-        opacity: 0.96;
-        }
-
-    footer {
-      background-color: var(--light-bg);
-      color: #6c757d;
-      padding: 20px 0;
-      text-align: center;
-      font-size: 0.9rem;
-    }
-
-    a {
-      color: var(--primary-color);
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    @keyframes fadeInDown {
-      from {
-        opacity: 0;
-        transform: translateY(-30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-  </style>
-
-    <style>
     :root {
       --primary-color: #5a8dee;
       --light-bg: #f5f8ff;
@@ -146,8 +23,18 @@
       --dark-bg: #121212;
       --dark-card: #1e1e1e;
       --text-dark: #eee;
+      --transition: all 0.3s ease-in-out;
     }
   
+    body {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #ffffff;
+      scroll-behavior: smooth;
+    }
+  
+    /* Dark Mode Styles */
     body.dark-mode {
       background-color: var(--dark-bg);
       color: var(--text-dark);
@@ -170,6 +57,156 @@
       color: var(--text-dark);
     }
   
+    body.dark-mode input,
+    body.dark-mode textarea {
+      background-color: #2b2b2b;
+      color: white;
+      border: 1px solid #555;
+    }
+  
+    .navbar {
+      background-color: #ffffff;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+    }
+  
+    header {
+      background: linear-gradient(145deg, #dce6ff, #e7ecff);
+      color: #1f2e55;
+      padding: 100px 0;
+      text-align: center;
+    }
+  
+    header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      animation: fadeInDown 1s ease-in-out;
+    }
+  
+    header p {
+      font-size: 1.25rem;
+      color: #5f6368;
+    }
+  
+    .btn-outline-light {
+      border: 2px solid white;
+      color: white;
+      transition: var(--transition);
+    }
+  
+    .btn-outline-light:hover {
+      background-color: white;
+      color: var(--primary-color);
+    }
+  
+    .section-title {
+      font-size: 2rem;
+      font-weight: 600;
+      color: var(--primary-color);
+      margin-bottom: 40px;
+      text-align: center;
+    }
+  
+    section {
+      padding: 60px 0;
+    }
+  
+    #skills .col {
+      text-align: center;
+      font-weight: 500;
+      color: var(--soft-text);
+      padding: 15px;
+      transition: var(--transition);
+    }
+  
+    #skills .col:hover {
+      background-color: var(--light-bg);
+      border-radius: 8px;
+    }
+  
+    /* Unified Project Card Styling */
+    .card.project-card {
+      border: none;
+      background: linear-gradient(135deg, #e3f0ff, #d0e5ff);
+      color: #001c38;
+      transition: var(--transition);
+      box-shadow: 0 4px 12px rgba(0, 85, 170, 0.1);
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .card.project-card:hover {
+      background: linear-gradient(135deg, #d1e7ff, #bfdfff);
+      box-shadow: 0 8px 20px rgba(0, 85, 170, 0.15);
+      transform: translateY(-5px) scale(1.02);
+      opacity: 0.96;
+    }
+  
+    .project-card .card-title {
+      font-weight: 600;
+      color: #002a52;
+    }
+  
+    .project-card .card-text li {
+      font-size: 0.94rem;
+      color: #00325c;
+      margin-bottom: 6px;
+    }
+  
+    .project-card .btn {
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      margin-top: 5px;
+    }
+  
+    .project-card .btn-outline-primary {
+      color: #0056b3;
+      border-color: #0056b3;
+    }
+  
+    .project-card .btn-outline-primary:hover {
+      background-color: #0056b3;
+      color: #fff;
+    }
+  
+    .project-card .btn-outline-secondary {
+      color: #444;
+      border-color: #999;
+    }
+  
+    .project-card .btn-outline-secondary:hover {
+      background-color: #6c757d;
+      color: #fff;
+    }
+  
+    footer {
+      background-color: var(--light-bg);
+      color: #6c757d;
+      padding: 20px 0;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+  
+    a {
+      color: var(--primary-color);
+      text-decoration: none;
+    }
+  
+    a:hover {
+      text-decoration: underline;
+    }
+  
+    input, textarea {
+      background-color: #fefefe;
+      border-radius: 6px;
+    }
+  
+    .form-control:focus {
+      box-shadow: 0 0 5px rgba(90, 141, 238, 0.5);
+    }
+  
     .toggle-switch {
       cursor: pointer;
       transition: 0.3s ease;
@@ -183,27 +220,18 @@
       margin-top: 20px;
     }
   
-    input, textarea {
-      background-color: #fefefe;
-      border-radius: 6px;
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
-  
-    body.dark-mode input,
-    body.dark-mode textarea {
-      background-color: #2b2b2b;
-      color: white;
-      border: 1px solid #555;
-    }
-  
-    .form-control:focus {
-      box-shadow: 0 0 5px rgba(90, 141, 238, 0.5);
-    }
-
-    .card-text li {
-        font-size: 0.94rem;
-        margin-bottom: 6px;
-        }
   </style>
+  
   
 </head>
 
