@@ -98,10 +98,16 @@
       transition: var(--transition);
     }
 
+    .project-card {
+        background-color: #fff;
+        transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+        }
+
     .project-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
-    }
+        transform: translateY(-5px) scale(1.02);
+        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.08);
+        opacity: 0.96;
+        }
 
     footer {
       background-color: var(--light-bg);
@@ -194,8 +200,9 @@
     }
 
     .card-text li {
-    margin-bottom: 8px;
-    }
+        font-size: 0.94rem;
+        margin-bottom: 6px;
+        }
   </style>
   
 </head>
@@ -291,98 +298,115 @@
   </section>
 
   <!-- Projects -->
-  <section id="projects">
+  <section id="projects" class="py-5 bg-light">
     <div class="container">
-      <h2 class="section-title">Projects</h2>
+      <h2 class="section-title text-center mb-5">Projects</h2>
       <div class="row g-4">
+  
         <!-- Project 1 -->
         <div class="col-md-4">
-          <div class="card project-card">
+          <div class="card project-card h-100 shadow-sm border-0">
             <div class="card-body">
               <h5 class="card-title">AI-Powered Customer Insight Platform</h5>
-              <p class="card-text">
-                <ul class="card-text">
-                    <li><strong>Contribution:</strong> Led the backend development (80%) of a scalable microservice architecture that powered AI-driven insights from user feedback.</li>
-                    <li><strong>Impact:</strong> Improved API response time by 35% and decreased data processing latency by 45% by optimizing message queues and caching with Redis.</li>
-                    <li><strong>Tools Used:</strong> PostgreSQL, Redis, Hugging Face Transformers (via Python microservice), AWS ECS.</li>
-                    <li><strong>AI Integration:</strong> Integrated sentiment analysis and topic extraction APIs to enrich customer data automatically.</li>
-                    <li><strong>Outcome:</strong> Enabled product teams to generate customer insights in under 5 minutes (down from 20+ minutes).</li>
-                  </ul>
-                  
-              </p>
-              <a href="#" class="btn btn-sm btn-outline-primary">GitHub</a>
-              <a href="#" class="btn btn-sm btn-outline-secondary">Live Demo</a>
-
-              <p class="card-text">
-              <h5 class="card-title">Real-Time Analytics API Gateway</h5>
-              
-                <ul class="card-text">
-                    <li><strong>Contribution:</strong> Contribution: Designed and implemented API Gateway with rate limiting and observability features. Owned 90% of the architecture and deployment strategy. </li>
-                    <li><strong>Contribution:</strong> Impact: Achieved 99.99% uptime, increased throughput by 60%, and improved dev onboarding time by 30% with modular and well-documented code. </li>
-                    <li><strong>Contribution:</strong> Tools Used: gRPC, AWS Lambda, API Gateway, CloudWatch. </li>
-                    <li><strong>Contribution:</strong> Outcome: Enabled seamless real-time metrics processing and exposure to frontend dashboards. </li>
-                </ul>
-            </p>
-              <a href="#" class="btn btn-sm btn-outline-primary">GitHub</a>
-              <a href="#" class="btn btn-sm btn-outline-secondary">Live Demo</a>
-
-              <p>
-              <h5 class="card-title">Accuknox</h5>
               <ul class="card-text">
-                <li><strong>Contribution:</strong> This sophisticated and intelligently designed online security provisioning platform leverages cutting-edge technologies to deliver robust protection against a wide array of online security threats. </li>
-                <li><strong>Contribution:</strong> Predictive Threat Analysis: Uses machine learning and predictive analytics to identify potential vulnerabilities in incoming client data before they are exploited. </li>
-                <li><strong>Contribution:</strong> Real-Time Monitoring: Continuous monitoring of security events and data traffic, providing instant alerts and action recommendations. </li>
-                <li><strong>Contribution:</strong> Automated Security Measures: Integrates automated response systems to mitigate risks immediately, enhancing security posture without manual intervention. </li>
-                <li><strong>Contribution:</strong> Tools Used: Python, Redis, Celery, Kubernetes, PostgreSQL, Linux, AWS, Django, Factory-boy, postman, swagger. </li>
+                <li><strong>Contribution:</strong> Led 80% of backend microservices to power AI-driven insights from user feedback.</li>
+                <li><strong>Impact:</strong> Reduced API latency by 35%, processing by 45% via Redis optimization.</li>
+                <li><strong>Tools:</strong> PostgreSQL, Redis, Hugging Face, AWS ECS.</li>
+                <li><strong>AI Integration:</strong> Sentiment analysis & topic extraction APIs.</li>
+                <li><strong>Outcome:</strong> Reduced insight generation time from 20+ mins to under 5 mins.</li>
               </ul>
-            </p>
               <a href="#" class="btn btn-sm btn-outline-primary">GitHub</a>
               <a href="#" class="btn btn-sm btn-outline-secondary">Live Demo</a>
-
-                <p>
-              <h5 class="card-title">E-commerce Integration Platform</h5>
-              <ul class="card-text">
-                <li><strong>Contribution:</strong> Role: Backend Engineer. </li>
-                <li><strong>Contribution:</strong> Built and integrated a microservices-based API platform for connecting with e-commerce platforms like Limeroad and logistics providers like DTDC. </li>
-                <li><strong>Contribution:</strong> Improved the API response time by 40% through query optimization and caching strategies using Redis. </li>
-              </ul>
-            </p>
-              <a href="#" class="btn btn-sm btn-outline-primary">GitHub</a>
-              <a href="#" class="btn btn-sm btn-outline-secondary">Live Demo</a>
-
-            <p>
-              <h5 class="card-title">Real-Time Personalization Engine for E-Commerce</h5>
-              <ul class="card-text">
-                <li><strong>Contribution:</strong> Contribution: Developed 70% of the recommendation microservice using collaborative filtering and deep learning models (PyTorch), deployed within a Kubernetes-managed architecture. </li>
-                <li><strong>Contribution:</strong> Impact: Boosted click-through rates on product suggestions by 28% and improved conversion rates by 12% through hyper-personalized recommendations. </li>
-                <li><strong>Contribution:</strong> AI Integration: Served real-time embeddings from a pretrained transformer model fine-tuned on product metadata and user behavior. </li>
-                <li><strong>Contribution:</strong> Outcome: Reduced recommendation latency to sub-150ms, enabling dynamic homepage personalization for 500k+ users daily. </li>
-                <li><strong>Contribution:</strong> Tools Used: Python, PyTorch, Redis, Kafka, Kubernetes, MongoDB. </li>
-              </ul>
-            </p>
-              <a href="#" class="btn btn-sm btn-outline-primary">GitHub</a>
-              <a href="#" class="btn btn-sm btn-outline-secondary">Live Demo</a>
-
-              <p>
-              <h5 class="card-title">Intelligent Document Processing Pipeline</h5>
-              <ul class="card-text">
-                <li><strong>Contribution:</strong> Contribution: Designed and implemented a modular pipeline to extract, classify, and summarize unstructured documents using NLP. </li>
-                <li><strong>Contribution:</strong> Impact: Reduced manual document review time by 80%, saving an estimated 1,000+ hours monthly for operations teams. </li>
-                <li><strong>Contribution:</strong> AI Integration: Used transformer-based zero-shot classification and summarization models; integrated OCR for scanned PDFs. </li>
-                <li><strong>Contribution:</strong> Outcome: Enabled fully automated processing of legal and financial documents with over 92% accuracy. </li>
-                <li><strong>Contribution:</strong> Tools Used: FastAPI, Hugging Face Transformers, Celery, RabbitMQ, PostgreSQL. </li>
-              </ul>
-            </p>
-              <a href="#" class="btn btn-sm btn-outline-primary">GitHub</a>
-              <a href="#" class="btn btn-sm btn-outline-secondary">Live Demo</a>
-
             </div>
           </div>
         </div>
-        <!-- Add more cards here -->
+  
+        <!-- Project 2 -->
+        <div class="col-md-4">
+          <div class="card project-card h-100 shadow-sm border-0">
+            <div class="card-body">
+              <h5 class="card-title">Real-Time Analytics API Gateway</h5>
+              <ul class="card-text">
+                <li><strong>Contribution:</strong> Designed scalable gateway w/ rate limiting & observability (90% ownership).</li>
+                <li><strong>Impact:</strong> 99.99% uptime, +60% throughput, -30% dev onboarding time.</li>
+                <li><strong>Tools:</strong> gRPC, AWS Lambda, API Gateway, CloudWatch.</li>
+                <li><strong>Outcome:</strong> Real-time metrics delivered to frontend dashboards.</li>
+              </ul>
+              <a href="#" class="btn btn-sm btn-outline-primary">GitHub</a>
+              <a href="#" class="btn btn-sm btn-outline-secondary">Live Demo</a>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Project 3 -->
+        <div class="col-md-4">
+          <div class="card project-card h-100 shadow-sm border-0">
+            <div class="card-body">
+              <h5 class="card-title">Accuknox – Security Provisioning Platform</h5>
+              <ul class="card-text">
+                <li><strong>Contribution:</strong> Led backend for predictive threat detection and real-time monitoring.</li>
+                <li><strong>Impact:</strong> ML-powered early warning system with automated mitigations.</li>
+                <li><strong>Tools:</strong> Python, Redis, Celery, Kubernetes, PostgreSQL, Django, AWS.</li>
+              </ul>
+              <a href="#" class="btn btn-sm btn-outline-primary">GitHub</a>
+              <a href="#" class="btn btn-sm btn-outline-secondary">Live Demo</a>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Project 4 -->
+        <div class="col-md-4">
+          <div class="card project-card h-100 shadow-sm border-0">
+            <div class="card-body">
+              <h5 class="card-title">E-commerce Integration Platform</h5>
+              <ul class="card-text">
+                <li><strong>Role:</strong> Backend Engineer – built microservices for e-com & logistics integration.</li>
+                <li><strong>Impact:</strong> Improved response time by 40% using Redis & query optimization.</li>
+              </ul>
+              <a href="#" class="btn btn-sm btn-outline-primary">GitHub</a>
+              <a href="#" class="btn btn-sm btn-outline-secondary">Live Demo</a>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Project 5 -->
+        <div class="col-md-4">
+          <div class="card project-card h-100 shadow-sm border-0">
+            <div class="card-body">
+              <h5 class="card-title">Real-Time Personalization Engine</h5>
+              <ul class="card-text">
+                <li><strong>Contribution:</strong> Developed 70% of rec engine using deep learning in Kubernetes.</li>
+                <li><strong>Impact:</strong> +28% CTR, +12% conversions with real-time personalized results.</li>
+                <li><strong>Tools:</strong> PyTorch, Redis, Kafka, MongoDB, Transformers.</li>
+                <li><strong>Outcome:</strong> Delivered sub-150ms recommendations to 500k+ daily users.</li>
+              </ul>
+              <a href="#" class="btn btn-sm btn-outline-primary">GitHub</a>
+              <a href="#" class="btn btn-sm btn-outline-secondary">Live Demo</a>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Project 6 -->
+        <div class="col-md-4">
+          <div class="card project-card h-100 shadow-sm border-0">
+            <div class="card-body">
+              <h5 class="card-title">Intelligent Document Processing Pipeline</h5>
+              <ul class="card-text">
+                <li><strong>Contribution:</strong> Designed NLP-based pipeline for classification & summarization.</li>
+                <li><strong>Impact:</strong> 80% reduction in manual review time; 1,000+ hours saved/month.</li>
+                <li><strong>Tools:</strong> FastAPI, Hugging Face, OCR, Celery, PostgreSQL.</li>
+                <li><strong>Outcome:</strong> +92% accuracy in automated document workflows.</li>
+              </ul>
+              <a href="#" class="btn btn-sm btn-outline-primary">GitHub</a>
+              <a href="#" class="btn btn-sm btn-outline-secondary">Live Demo</a>
+            </div>
+          </div>
+        </div>
+  
       </div>
     </div>
   </section>
+  
 
   <!-- Education -->
   <section id="education" class="bg-light">
